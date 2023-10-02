@@ -69,11 +69,16 @@ end)
 tool.Parent = game.Players.LocalPlayer.Backpack
 end)
 
+Section:NewButton("FPS Checker", "ButtonInfo", function()
+    print("Clicked")
+loadstring(game:HttpGet('https://raw.githubusercontent.com/1201for/littlegui/main/FPS-Counter'))()
+end)
+
 local Tab = Window:NewTab("Scripts2")
 
 local Section = Tab:NewSection("Scripts2")
 
-Section:NewButton("Sit (S)", "ButtonInfo", function()
+Section:NewButton("Sit (T)", "ButtonInfo", function()
     print("Clicked")
 end)
 
@@ -81,7 +86,7 @@ local player = game.Players.LocalPlayer
 local mouse = player:GetMouse()
  
 mouse.KeyDown:connect(function(key)
-	if key:lower() == "s" or key:upper()=="S" then
+	if key:lower() == "t" or key:upper()=="T" then
 		game.Players.LocalPlayer.Character:WaitForChild("Humanoid").Sit = true
 	end
 end)
